@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Integral';
+    src: url('./assets/fonts/Fontspring-DEMO-integralcf-extrabold.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Integral';
+    src: url('./assets/fonts/Fontspring-DEMO-integralcf-regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
