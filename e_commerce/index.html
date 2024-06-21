@@ -13,15 +13,32 @@
 
 <body>
     <header>
-        <section class="flex-all-center banner">
+        <section class="banner">
             <p>Sign up and get 20% off to your first order.</p><span> Sign Up Now</span>
         </section>
         <nav class="navbar">
-            <div class="flex-all-center navbar__side">
+            <div class="navbar__side">
                 <img class="menu" src="./assets/icons/Frame.svg" alt="">
                 <p class="logo">SHOP.CO</p>
             </div>
-            <div class="flex-all-center navbar__icons">
+            <div class="page__links">
+                <ul>
+                    <li>
+                        <a href="">Shop</a>
+                    </li>
+                    <li>
+                        <a href="">On Sale</a>
+                    </li>
+                    <li>
+                        <a href="">New arrival</a>
+                    </li>
+                    <li>
+                        <a href="">Brand</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search"><input type="search"></div>
+            <div class="navbar__icons">
                 <div class="search"><img src="./assets/icons/Frame (1).svg" alt=""></div>
                 <div class="cart"><img src="./assets/icons/Frame (2).svg" alt=""></div>
                 <div class="user"><img src="./assets/icons/Frame (3).svg" alt=""></div>
@@ -31,46 +48,46 @@
     </header>
 
     <section class="hero">
-        <h1 class="hero__heading">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
-        <p class="hero__content">Browse through our diverse range of meticulously crafted garments, designed to
-            bring
-            out your individuality and cater to your sense of style.</p>
-        <button class="hero__button">Shop now</button>
-        <div class="hero__numbers">
-            <div class="section-1">
-                <div class="one">
-                    <span>200+</span>
-                    <p>International Brands</p>
+        <div class="hero__main">
+            <h1 class="hero__heading">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+            <p class="hero__content">Browse through our diverse range of meticulously crafted garments, designed to
+                bring
+                out your individuality and cater to your sense of style.</p>
+            <button class="hero__button">Shop now</button>
+            <div class="hero__numbers">
+                <div class="section-1">
+                    <div class="one">
+                        <span>200+</span>
+                        <p>International Brands</p>
+                    </div>
+                    <div class="line">
+    
+                    </div>
+                    <div class="two">
+                        <span>2000+</span>
+                        <p>High Quality Products</p>
+                    </div>
+                    <!-- <div class="line"> -->
                 </div>
-                <div class="line">
-
+                <div class="three">
+                    <span>30000+</span>
+                    <p>Happy Customers</p>
                 </div>
-                <div class="two">
-                    <span>2000+</span>
-                    <p>High Quality Products</p>
-                </div>
-            </div>
-            <div class="three">
-                <span>30000+</span>
-                <p>Happy Customers</p>
             </div>
         </div>
-
         <div class="hero__image">
             <img src="./assets/images/branding.jpeg" alt="This is a photo of two people who are promoting the brand">
         </div>
-
-        <section class="hero__brands">
-            <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
-            <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
-            <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
-            <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
-            <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
-        </section>
     </section>
-
+    <section class="hero__brands">
+        <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
+        <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
+        <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
+        <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
+        <img src="./assets/logos/zara-logo-1 1.svg" alt="" class="hero_brand">
+    </section>
     <section class="products">
-        <div>
+        <div class="all__products">
             <h2 class="products__header">NEW ARRIVALS</h2>
             <ul class="products__list">
                 <li class="products__list-item">
@@ -167,22 +184,22 @@
             <button>View All</button>
         </div>
     </section>
-    <section class="flex-all-center style">
+    <section class="style">
         <h2>BROWSE BY DRESS STYLE</h2>
         <ul class="style__list">
-            <li class="style__item">
+            <li class="style__item one">
                 <img src="./assets/images/shirt__2.png" alt="">
                 <span>Casual</span>
             </li>
-            <li class="style__item">
+            <li class="style__item two">
                 <img src="./assets/images/shirt__2.png" alt="">
                 <span>Casual</span>
             </li>
-            <li class="style__item">
+            <li class="style__item three">
                 <img src="./assets/images/shirt__2.png" alt="">
                 <span>Casual</span>
             </li>
-            <li class="style__item">
+            <li class="style__item four">
                 <img src="./assets/images/shirt__2.png" alt="">
                 <span>Casual</span>
             </li>
@@ -197,21 +214,60 @@
             </div>
         </div>
 
-        <article class="testimonials__section">
-            <div class="stars">
-                <img src="./assets/icons/star1.svg" alt="">
-                <img src="./assets/icons/star1.svg" alt="">
-                <img src="./assets/icons/star1.svg" alt="">
-                <img src="./assets/icons/star1.svg" alt="">
-                <img src="./assets/icons/star1.svg" alt="">
-            </div>
-            <p>Sarah M.</p>
-            <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
-                elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-        </article>
+        <div class="testionial__list">
+            <article class="testimonials__section">
+                <div class="stars">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                </div>
+                <p class="name">Sarah M. <img src="./assets/icons/verified.svg" alt=""></p>
+                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
+                    elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+            </article>
+            <article class="testimonials__section">
+                <div class="stars">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                </div>
+                <p class="name">Sarah M. <img src="./assets/icons/verified.svg" alt=""></p>
+                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
+                    elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+            </article>
+            <article class="testimonials__section">
+                <div class="stars">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                </div>
+                <p class="name">Sarah M. <img src="./assets/icons/verified.svg" alt=""></p>
+                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
+                    elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+            </article>
+            <article class="testimonials__section">
+                <div class="stars">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                    <img src="./assets/icons/star1.svg" alt="">
+                </div>
+                <p class="name">Sarah M. <img src="./assets/icons/verified.svg" alt=""></p>
+                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
+                    elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+            </article>
+        </div>
+        
     </section>
 
-    <section class="flex-all-center newsletter">
+    <section class="newsletter">
         <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
         <input type="text" placeholder="Enter your email address">
         <button>Subscribe to Newsletter</button>
@@ -241,48 +297,48 @@
                 </li>
             </ul>
             <ul class="footer__links">
-                <p>COMPANY</p>
+                <p>HELP</p>
                 <li>
-                    <a href="">About</a>
+                    <a href="">Customer Support</a>
                 </li>
                 <li>
-                    <a href="">Features</a>
+                    <a href="">Delivery Details</a>
                 </li>
                 <li>
-                    <a href="">Works</a>
+                    <a href="">Terms & Conditions</a>
                 </li>
                 <li>
-                    <a href="">Career</a>
-                </li>
-            </ul>
-            <ul class="footer__links">
-                <p>COMPANY</p>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Features</a>
-                </li>
-                <li>
-                    <a href="">Works</a>
-                </li>
-                <li>
-                    <a href="">Career</a>
+                    <a href="">Privacy Policy</a>
                 </li>
             </ul>
             <ul class="footer__links">
-                <p>COMPANY</p>
+                <p>FAQ</p>
                 <li>
-                    <a href="">About</a>
+                    <a href="">Account</a>
                 </li>
                 <li>
-                    <a href="">Features</a>
+                    <a href="">Manage Deliveries</a>
                 </li>
                 <li>
-                    <a href="">Works</a>
+                    <a href="">Orders</a>
                 </li>
                 <li>
-                    <a href="">Career</a>
+                    <a href="">Payments</a>
+                </li>
+            </ul>
+            <ul class="footer__links">
+                <p>Resources</p>
+                <li>
+                    <a href="">Free E-books</a>
+                </li>
+                <li>
+                    <a href="">Developent Tutorial</a>
+                </li>
+                <li>
+                    <a href="">How to Blog</a>
+                </li>
+                <li>
+                    <a href="">Youtube Playlist</a>
                 </li>
             </ul>
         </div>
