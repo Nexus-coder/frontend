@@ -55,7 +55,11 @@
     font-weight: bold;
 }
 
-.page__links {
+.navbar__search {
+    display: none;
+}
+
+.navbar__links {
     display: none;
 }
 
@@ -97,7 +101,7 @@
 
 .hero__numbers {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -114,22 +118,25 @@
     line-height: 22px;
 }
 
-.hero__numbers .section-1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-basis: 100%;
-}
-
-.hero__numbers .section-1 .line {
+.hero__numbers .line {
     width: 1px;
     height: 52px;
     background: rgba(0, 0, 0, 0.10);
 }
 
-.hero__numbers .three {
-    margin-top: 12px;
+.hero__numbers .line.none {
+    display: none;
 }
+
+.hero__numbers .three {
+    flex-basis: 50%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .hero__image {
     width: 100%;
@@ -300,24 +307,24 @@
     flex-basis: 250px;
 }
 
-.testionial__list {
-    width: 100%;
+.testimonial__list {
     display: flex;
-    flex-direction: row;
     gap: 12px;
+    width: 100%;
     overflow-x: scroll;
 }
 
-.testimonials__section {
+.testimonial {
+    min-width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     padding: 24px;
-    gap: 5px;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.10);
 }
 
-.testimonials__section .name {
+.testimonial .name {
     color: #000;
     font-size: 16px;
     font-style: normal;
@@ -328,13 +335,12 @@
     gap: 5px;
 }
 
-.testimonials__section p {
+.testimonial p {
     color: rgba(0, 0, 0, 0.60);
     font-family: Satoshi;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-
 }
 
 .newsletter {
@@ -348,15 +354,9 @@
     border-radius: 20px;
     background: var(--black);
     margin-inline: auto;
-}
-
-.newsletter p {
-    color: #FFF;
-    font-family: "Integral";
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 35px;
-    text-align: center;
+    position: absolute;
+    top: -150px;
+    left: 15%;
 }
 
 input {
@@ -384,8 +384,17 @@ input {
     position: relative;
     background: #F0F0F0;
     padding: var(--margin);
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 150px;
+    padding-top: 200px;
+}
+
+.footer .newsletter p {
+    color: #FFF;
+    font-family: "Integral";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
 }
 
 .footer h2 {
@@ -449,19 +458,35 @@ input {
 
 @media (min-width:768px) {
     .navbar {
-        padding: 20px 100px 25px 100px;
-        flex: 1 0 2 0;
+        padding: 20px 100px 25px 100px 0 2 0;
     }
 
     .menu {
         display: none;
     }
 
-    .page__links {
+    .navbar__search {
+        display: block;
+        position: relative;
+    }
+
+    .navbar__search .search {
+        padding-left: 40px;
+    }
+
+    .search__icon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        transform: translateY(-5%);
+        fill: red;
+    }
+
+    .navbar__links {
         display: block;
     }
 
-    .page__links ul {
+    .navbar__links ul {
         display: flex;
         gap: 20px;
     }
@@ -473,7 +498,7 @@ input {
         background: #F0F0F0;
     }
 
-    .page__links a {
+    .navbar__links a {
         color: #000;
     }
 
@@ -501,7 +526,6 @@ input {
         font-style: normal;
         font-weight: 700;
         line-height: 64px;
-        /* 100% */
     }
 
     .hero__content {
@@ -511,7 +535,6 @@ input {
         font-style: normal;
         font-weight: 400;
         line-height: 22px;
-        /* 137.5% */
     }
 
     .hero__button {
@@ -522,34 +545,19 @@ input {
 
     .hero__numbers {
         display: flex;
-        width: 100%;
+        justify-content: space-around;
         flex-wrap: nowrap;
         margin-top: 20px;
     }
 
-    .hero__numbers div span {
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    .hero__numbers div p {
-        color: rgba(0, 0, 0, 0.60);
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
-    }
-
-    .hero__numbers .section-1 .line {
-        width: 1px;
-        height: 52px;
-        background: rgba(0, 0, 0, 0.10);
+    .hero__numbers .line.none {
+        display: block;
     }
 
     .hero__numbers .three {
-        margin-top: 12px;
+        margin-top: 0px;
+        display: flex;
+        flex-basis: 20%;
     }
 
     .hero__image {
@@ -665,169 +673,48 @@ input {
         z-index: 10;
     }
 
-    .testimonials {
-        margin: var(--margin);
-        padding: 50px 0px;
-    }
-
-    .testimonials .header {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 25px;
-    }
-
-    .testimonials .header .arrows {
-        align-self: last baseline;
-    }
-
-    .testimonials h2 {
-        color: #000;
-        font-family: "Integral";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 36px;
-        flex-basis: 250px;
-    }
-
-    .testimonials__section {
-        display: flex;
-        width: 400px;
-        height: 240px;
-        padding: 28px 32px;
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: 24px 342px;
-        flex-shrink: 0;
-        flex-wrap: wrap;
-    }
-
-    .testimonials__section .name {
-        color: #000;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 22px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .testimonials__section p {
-        color: rgba(0, 0, 0, 0.60);
-        font-family: Satoshi;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-
+    .testimonial {
+        min-width: 0;
     }
 
     .newsletter {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        height: 180px;
+        position: absolute;
+        top: -100px;
+        left: 5%;
+        width: 1400px;
+        padding: 36px 64px;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-        width: 360px;
-        height: 300px;
-        gap: 20px;
-        border-radius: 20px;
-        background: var(--black);
-        margin-inline: auto;
     }
 
-    .newsletter p {
-        color: #FFF;
-        font-family: "Integral";
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 35px;
-        text-align: center;
-    }
-
-    input {
-        outline: none;
-        border: none;
-    }
-
-    .newsletter input {
-        width: 310px;
-        height: 40px;
-        padding: 10px 15px;
-        border-radius: 60px;
-        background: #FFF;
-    }
-
-    .newsletter button {
-        width: 310px;
-        height: 40px;
-        padding: 10px 15px;
-        border-radius: 60px;
-        background: #FFF;
+    .newsletter div button {
+        margin-top: 10px;
     }
 
     .footer {
         position: relative;
         background: #F0F0F0;
         padding: var(--margin);
-        margin-top: 20px;
-        padding-top: 20px;
+        margin-top: 100px;
+        padding-top: 100px;
+        padding-left: 75px;
     }
 
-    .footer h2 {
-        color: #000;
-        font-family: "Integral";
-        font-size: 28.847px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin-bottom: 16px;
+    .footer .newsletter p {
+        text-align: left;
     }
-
-    .footer p {
-        color: rgba(0, 0, 0, 0.60);
-        font-family: Satoshi;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px;
-        /* 142.857% */
-    }
-
-    .footer a {
-        color: rgba(0, 0, 0, 0.60);
-        font-family: Satoshi;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px;
-        /* 142.857% */
-    }
-
     .footer .socials {
         margin-top: 16px;
 
     }
 
-    .footer__links p {
-        color: #000;
-        font-family: Satoshi;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: 3px;
-        margin-bottom: 16px;
-    }
-
-    .footer__links li {
-        margin-bottom: 16px;
-    }
-
     .footer .footer__items {
         display: flex;
         padding-inline: 5px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         margin-top: 16px;
     }
 

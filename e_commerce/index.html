@@ -21,7 +21,7 @@
                 <img class="menu" src="./assets/icons/Frame.svg" alt="">
                 <p class="logo">SHOP.CO</p>
             </div>
-            <div class="page__links">
+            <div class="navbar__links">
                 <ul>
                     <li>
                         <a href="">Shop</a>
@@ -37,16 +37,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="search"><input type="search"></div>
+            <div class="navbar__search">
+                <img class="search__icon" src="./assets/icons/search.svg" alt="">
+                <input class="search" type="search" placeholder="Search for products...">
+            </div>
             <div class="navbar__icons">
-                <div class="search"><img src="./assets/icons/Frame (1).svg" alt=""></div>
-                <div class="cart"><img src="./assets/icons/Frame (2).svg" alt=""></div>
+                <div class="search"><img src="./assets/icons/search.svg" alt=""></div>
+                <div class="cart"><img src="./assets/icons/cart.svg" alt=""></div>
                 <div class="user"><img src="./assets/icons/Frame (3).svg" alt=""></div>
             </div>
-
         </nav>
     </header>
-
     <section class="hero">
         <div class="hero__main">
             <h1 class="hero__heading">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
@@ -55,20 +56,16 @@
                 out your individuality and cater to your sense of style.</p>
             <button class="hero__button">Shop now</button>
             <div class="hero__numbers">
-                <div class="section-1">
-                    <div class="one">
-                        <span>200+</span>
-                        <p>International Brands</p>
-                    </div>
-                    <div class="line">
-    
-                    </div>
-                    <div class="two">
-                        <span>2000+</span>
-                        <p>High Quality Products</p>
-                    </div>
-                    <!-- <div class="line"> -->
+                <div class="one">
+                    <span>200+</span>
+                    <p>International Brands</p>
                 </div>
+                <div class="line"></div>
+                <div class="two">
+                    <span>2000+</span>
+                    <p>High Quality Products</p>
+                </div>
+                <div class="line none"></div>
                 <div class="three">
                     <span>30000+</span>
                     <p>Happy Customers</p>
@@ -214,8 +211,8 @@
             </div>
         </div>
 
-        <div class="testionial__list">
-            <article class="testimonials__section">
+        <div class="testimonial__list">
+            <article class="testimonial" id="testimonial-1">
                 <div class="stars">
                     <img src="./assets/icons/star1.svg" alt="">
                     <img src="./assets/icons/star1.svg" alt="">
@@ -227,7 +224,7 @@
                 <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
                     elegant dresses, every piece I've bought has exceeded my expectations.”</p>
             </article>
-            <article class="testimonials__section">
+            <article class="testimonial" id="testimonial-1">
                 <div class="stars">
                     <img src="./assets/icons/star1.svg" alt="">
                     <img src="./assets/icons/star1.svg" alt="">
@@ -239,19 +236,7 @@
                 <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
                     elegant dresses, every piece I've bought has exceeded my expectations.”</p>
             </article>
-            <article class="testimonials__section">
-                <div class="stars">
-                    <img src="./assets/icons/star1.svg" alt="">
-                    <img src="./assets/icons/star1.svg" alt="">
-                    <img src="./assets/icons/star1.svg" alt="">
-                    <img src="./assets/icons/star1.svg" alt="">
-                    <img src="./assets/icons/star1.svg" alt="">
-                </div>
-                <p class="name">Sarah M. <img src="./assets/icons/verified.svg" alt=""></p>
-                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
-                    elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-            </article>
-            <article class="testimonials__section">
+            <article class="testimonial" id="testimonial-1">
                 <div class="stars">
                     <img src="./assets/icons/star1.svg" alt="">
                     <img src="./assets/icons/star1.svg" alt="">
@@ -264,15 +249,17 @@
                     elegant dresses, every piece I've bought has exceeded my expectations.”</p>
             </article>
         </div>
-        
+
     </section>
 
-    <section class="newsletter">
-        <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
-        <input type="text" placeholder="Enter your email address">
-        <button>Subscribe to Newsletter</button>
-    </section>
     <footer class="footer">
+        <section class="newsletter">
+            <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+            <div>
+                <input type="text" placeholder="Enter your email address">
+                <button>Subscribe to Newsletter</button>
+            </div>
+        </section>
         <h2>SHOP.CO</h2>
         <p>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
         <ul class="socials">
